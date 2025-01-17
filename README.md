@@ -1,5 +1,8 @@
-# Learn-Carla
-This repository contains the complete source code of the blog post series at Zhihu
+
+# Carla Simulator
+
+Tgus repository is original from a Zhihu blog:
+
 --[Carla Learning Tutorial](https://www.zhihu.com/column/c_1324712096148516864)
 
 ## Direct Blog Links
@@ -11,5 +14,14 @@ This repository contains the complete source code of the blog post series at Zhi
 [Tutorial 6: Behavior Planning(Part1) ](https://zhuanlan.zhihu.com/p/355420522) \
 [Tutorial 7: Behavior Planning(Part2) ](https://zhuanlan.zhihu.com/p/376411890) 
 
-## 微信交流群
-为了方便各位朋友更容易交流carla相关的知识，我专门建立了一个carla交流群，可以在其中进行各种自动驾驶相关话题讨论。请加我微信JPS2014, 我会拉你入群。请备注好加我的理由，院校/公司，谢谢配合！
+## Installing Carla
+Make sure your device have at least 100G free space, the unreal engine takes a lot of space.
+
+
+## Using Carla for TC-MAPF simulation
+
+Using `crossroad_waypoints.py` to fit the discrete waypoints of TC-CBS output. The data will be saved to `/path/data`. Be careful that I align the map coordinate in the Carla city to the coordinate of our grid map.
+
+Using `example_cross_xxxxx.py` to run the simulation. In Carla simulator, press the play button and then run the code in the terminal. `basic_api.py` provides a very simple introduction of running the simualtion, where you can enable or disable any building or element in the city envrionment. You can set the weather, and even plot the planned path on the city. These examples should be self-contained. Following them will help you know how to make a environment and make cars move.
+
+Make sure to refer to Carla's [official document](https://carla.readthedocs.io/en/latest/). The key is to understand how to spawn a vehicle, and then set its pose, which is easy.
