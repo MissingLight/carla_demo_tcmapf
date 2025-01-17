@@ -407,25 +407,25 @@ def main():
         target_points_manual_7.location.y = y_list_7[-1]
 
 
-        # =================== Spawn Pedestrian ===================
-        pedestrain_type_list = ['walker.pedestrian.0001']
+        # # =================== Spawn Pedestrian ===================
+        # pedestrain_type_list = ['walker.pedestrian.0001']
 
-        # spawn the manual car 1
-        ego_pedestrain_bp_1 = blueprint_library.find(random.choice(pedestrain_type_list))
-        # if ego_pedestrain_bp_1.has_attribute('color'):
-        #     color = random.choice(ego_pedestrain_bp_1.get_attribute('color').recommended_values)
-        #     ego_pedestrain_bp_1.set_attribute('color', '1, 1, 1')   
-        spawn_points_pedestrain_1 = filtered_waypoints[3].transform     
-        spawn_points_pedestrain_1.location.x = x_list_1[0]-20
-        spawn_points_pedestrain_1.location.y = y_list_1[0]
-        spawn_points_pedestrain_1.location.z += 2.6
-        spawn_points_pedestrain_1.rotation.yaw = a_list_1[0]
-        ego_pedestrain_manual_1 = world.spawn_actor(ego_pedestrain_bp_1, spawn_points_pedestrain_1)
-        actor_list.append(ego_pedestrain_manual_1)
+        # # spawn the manual car 1
+        # ego_pedestrain_bp_1 = blueprint_library.find(random.choice(pedestrain_type_list))
+        # # if ego_pedestrain_bp_1.has_attribute('color'):
+        # #     color = random.choice(ego_pedestrain_bp_1.get_attribute('color').recommended_values)
+        # #     ego_pedestrain_bp_1.set_attribute('color', '1, 1, 1')   
+        # spawn_points_pedestrain_1 = filtered_waypoints[3].transform     
+        # spawn_points_pedestrain_1.location.x = x_list_1[0]-20
+        # spawn_points_pedestrain_1.location.y = y_list_1[0]
+        # spawn_points_pedestrain_1.location.z += 2.6
+        # spawn_points_pedestrain_1.rotation.yaw = a_list_1[0]
+        # ego_pedestrain_manual_1 = world.spawn_actor(ego_pedestrain_bp_1, spawn_points_pedestrain_1)
+        # actor_list.append(ego_pedestrain_manual_1)
 
-        target_points_pedestrain_1 = filtered_waypoints[60].transform
-        target_points_pedestrain_1.location.x = x_list_1[-1]
-        target_points_pedestrain_1.location.y = y_list_1[-1]
+        # target_points_pedestrain_1 = filtered_waypoints[60].transform
+        # target_points_pedestrain_1.location.x = x_list_1[-1]
+        # target_points_pedestrain_1.location.y = y_list_1[-1]
 
 
         ###########################################################################################
