@@ -15,13 +15,17 @@ Tgus repository is original from a Zhihu blog:
 [Tutorial 7: Behavior Planning(Part2) ](https://zhuanlan.zhihu.com/p/376411890) 
 
 ## Installing Carla
-Make sure your device have at least 100G free space, the unreal engine takes a lot of space.
+Make sure your device has at least 100G free space, the unreal engine takes a lot of space. 
 
 
 ## Using Carla for TC-MAPF simulation
 
-Using `crossroad_waypoints.py` to fit the discrete waypoints of TC-CBS output. The data will be saved to `/path/data`. Be careful that I align the map coordinate in the Carla city to the coordinate of our grid map.
+### Path data
+Using `crossroad_waypoints.py` to fit the discrete waypoints of TC-CBS output. The data are stored in `python/path_data`. Be careful because I aligned the map coordinate in the Carla city to the coordinate of our grid map.
 
+In each case, for example in `iros_final_paper_demo/test4AgentsSmall_straight2teams`, put the original txt files of path results in it. And run `crossroad_waypoints.py` will save to the `/fit` folder.
+
+### Run Simulation
 Using `example_cross_xxxxx.py` to run the simulation. In Carla simulator, press the play button and then run the code in the terminal. `basic_api.py` provides a very simple introduction of running the simualtion, where you can enable or disable any building or element in the city envrionment. You can set the weather, and even plot the planned path on the city. These examples should be self-contained. Following them will help you know how to make a environment and make cars move.
 
 Make sure to refer to Carla's [official document](https://carla.readthedocs.io/en/latest/). The key is to understand how to spawn a vehicle, and then set its pose, which is easy.
